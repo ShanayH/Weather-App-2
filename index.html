@@ -31,30 +31,100 @@
                 20°C
               </h3>
             </div>
-
-            <div class="col-3">
-              <form>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  autocomplete="off"
-                  autofocus="on"
-                  
-                />
-              </form>
+ 
+            <div class="col-4">
+            <input
+              type="text"
+              placeholder="Search"
+              autocomplete="off"
+              autofocus="on"
+              class="search-bar"
+              id="search-bar"
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="search-button"
+              id="search-button"
+            />
+            <button type="button" class="btn btn-info">
+              Use Current Location
+            </button>
+          </form>
               </div>
-
-              <div class="col-3">
-                <form>
-                <input type="submit" value="Search" />
-                </form>
               </div>
+            </div>
+          </div>
+        </div>
+      
 
+        <div class="row">
+            <div class="col-4">
+              <h1 class="temperature" id="temperature">🌦️-4</h1>
+              <h1>
+                <span class="units">
+                  <a href="#" class="units" id="celsius">°C </a> |
+                  <a href="#" class="units" id="fahrenheit"> °F</a>
+                </span>
+              </h1>
+            </div>
+            <div class="col-4">
+              <h4 class="temp-description" id="temp-description">Cloudy</h4>
+              <h4 class="forecast" id="forecast">-1 | -10</h4>
+            </div>
+          </div>
+          <br />
+          <hr />
+          <div class="row">
+            <div class="col-1">
+              <h5>Tue</h5>
+              <p class="forecast-numbers">-4 <br />⛅</p>
+            </div>
+
+            <div class="col-1">
+              <h5>Wed</h5>
+              <p class="forecast-numbers">
+                5 <br />
+                ⛅
+              </p>
+            </div>
+
+            <div class="col-1">
+              <h5>Thu</h5>
+              <p class="forecast-numbers">
+                7 <br />
+                🌞
+              </p>
+            </div>
+
+            <div class="col-1">
+              <h5>Fri</h5>
+              <p class="forecast-numbers">
+                -3 <br />
+                🌦️
+              </p>
+            </div>
+
+            <div class="col-1">
+              <h5>Sat</h5>
+              <p class="forecast-numbers">
+                5 <br />
+                ⛅
+              </p>
+            </div>
+
+            <div class="col-1">
+              <h5>Sun</h5>
+              <p class="forecast-numbers">
+                12 <br />
+                🌞
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    
 
     <script src="src/app.js"></script>
   </body>
