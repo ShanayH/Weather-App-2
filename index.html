@@ -14,8 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App 2</title>
   </head>
   <body>
@@ -24,7 +25,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-4">
-              <p class="date-time">Date | Time</p>
+              <p class="current-date" id="currentDate">Date | Time</p>
               <h1 class="city-result" id="city-result">London</h1>
       
               
@@ -63,12 +64,14 @@
                   width="30px"
                   class="float-left"
                 />
-                20
-                <span class="unit">
-                  <a href="#" class="celsius" id="celsius">°C </a> |
-                  <a href="#" class="fahrenheit" id="fahrenheit"> °F</a>
-                </span>
-              </h1>
+                20 
+              
+                <span class="units">
+                  <a href="#" class="units" id="celsius">°C </a> 
+                
+                  <a href="#" class="units" id="fahrenheit"> °F</a>
+                </span> 
+             </h1>
             </div>
             <div class="col-4">
               <h4 class="description" id="description">Cloudy</h4>

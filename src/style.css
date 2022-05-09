@@ -23,7 +23,7 @@ button {
   margin: 5px;
 }
 
-.date-time {
+.current-date {
   padding: 0 20px;
 }
 
@@ -45,8 +45,8 @@ button {
   padding: 30px;
 }
 
-.unit {
-  font-size: 100px;
+.units {
+  font-size: 15px;
   text-decoration: none;
   position: relative;
   font-size: 14px;
