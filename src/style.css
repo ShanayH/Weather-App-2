@@ -61,7 +61,8 @@ button {
 }
 
 .forecast {
-  padding-left: 20px;
+  padding: 20px;
+  
 }
 
 .forecast span {
@@ -76,4 +77,14 @@ button {
 
 .humidity span {
   padding-left: 5px;
+}
+
+.wind {
+  padding-left: 20px;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+
+.wind span {
+  padding-left: 0px;
 }
