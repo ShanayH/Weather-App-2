@@ -36,24 +36,23 @@ let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
 //change h1 to the city being searched for
-let apiKey = "2f4a61b0876133218968273ba29696cf";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&${units}`;
-let units = "metric";
-let city = "London";
 
 function search(event) {
   event.preventDefault();
-  //city-result is the (h1)
-  let citySearch = document.querySelector("#city-result");
+  //#city-result is the h1 (Regina)
+  let searchCity = document.querySelector("#city-result");
   let searchBar = document.querySelector("#search-bar").value;
 
-  citySearch.innerHTML = `${searchBar}`;
+  searchCity.innerHTML = `${searchBar}`;
   let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchBar}&APPID=${apiKey}&units=${units}`;
   axios.get(weatherUrl).then(showTemp);
 }
 
-let Search = document.querySelector("#search-button");
-Search.addEventListener("click", search);
+let citySearch = document.querySelector("#search-button");
+citySearch.addEventListener("click", search);
 
 let submitEvent = document.querySelector("#search-bar");
 submitEvent.addEventListener("submit", search);
+
+let units = "metric";
+let apiKey = "2f4a61b0876133218968273ba29696cf";
