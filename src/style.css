@@ -57,8 +57,15 @@ button {
   font-style: italic;
   font-weight: bold;
   padding-left: 20px;
+  text-transform: capitalize;
 }
 
 .forecast {
   padding-left: 20px;
+}
+
+.humidity {
+  padding-left: 20px;
+  text-transform: capitalize;
+  font-size: 15px;
 }

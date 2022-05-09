@@ -38,12 +38,14 @@ currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}
 //change temp to temp of city being searched for
 
 function showTemp(response) {
-  console.log(response);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
 
   let cityElement = document.querySelector("#city-result");
   cityElement.innerHTML = response.data.name;
+
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 let apiKey = "2f4a61b0876133218968273ba29696cf";
