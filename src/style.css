@@ -5,6 +5,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+button {
+  padding: 10px;
+}
+
+.card {
+  border-radius: 20px;
+}
 .units {
   font-size: 20px;
+}
+
+.description {
+  font-style: italic;
+  font-weight: bold;
 }
