@@ -35,24 +35,20 @@ let theMonth = months[now.getMonth()];
 let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
-//change h1 to the city being searched for
+//change temp to temp of city being searched for
 
-function search(event) {
-  event.preventDefault();
-  //#city-result is the h1 (Regina)
-  let searchCity = document.querySelector("#city-result");
-  let searchBar = document.querySelector("#search-bar").value;
+function showTemp(response) {
+  console.log(response);
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
 
-  searchCity.innerHTML = `${searchBar}`;
-  let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchBar}&APPID=${apiKey}&units=${units}`;
-  axios.get(weatherUrl).then(showTemp);
+  let cityElement = document.querySelector("#city-result");
+  cityElement.innerHTML = response.data.name;
 }
 
-let citySearch = document.querySelector("#search-button");
-citySearch.addEventListener("click", search);
-
-let submitEvent = document.querySelector("#search-bar");
-submitEvent.addEventListener("submit", search);
-
-let units = "metric";
 let apiKey = "2f4a61b0876133218968273ba29696cf";
+let units = "metric";
+let city = "Regina";
+let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
+
+axios.get(url).then(showTemp);
