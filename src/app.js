@@ -46,6 +46,15 @@ function showTemp(response) {
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+
+  let lowForecastElement = document.querySelector("#low-forecast");
+  lowForecastElement.innerHTML = Math.round(response.data.main.temp_min);
+
+  let highForecastElement = document.querySelector("#high-forecast");
+  highForecastElement.innerHTML = Math.round(response.data.main.temp_max);
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
 }
 
 let apiKey = "2f4a61b0876133218968273ba29696cf";
