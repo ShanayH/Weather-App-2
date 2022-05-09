@@ -1,12 +1,17 @@
 body {
-  background-color: aquamarine;
+  background-color: #53a8b6;
   max-width: 800px;
-  margin: 40px auto;
+  padding: 40px;
+  margin: 60px auto;
   font-family: "Roboto", sans-serif;
 }
 
 button {
   padding: 10px;
+}
+
+.card {
+  background-color: #79c2d0;
 }
 
 .date-time {
@@ -16,17 +21,21 @@ button {
 .card-body {
   padding: 10px;
 }
+
 .city-result {
   margin-bottom: 0px;
   padding: 0 20px;
 }
+
 .temperature {
   padding: 10px 20px;
 }
+
 .card {
   border-radius: 20px;
   padding: 30px;
 }
+
 .units {
   font-size: 20px;
 }
