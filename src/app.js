@@ -41,6 +41,9 @@ function showTemp(response) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
 
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.innerHTML = response.data.main.temp;
+
   let cityElement = document.querySelector("#city-result");
   cityElement.innerHTML = response.data.name;
 
