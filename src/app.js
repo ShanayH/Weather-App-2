@@ -43,7 +43,6 @@ function showTemp(response) {
 
   let cityElement = document.querySelector("#city-result");
   cityElement.innerHTML = response.data.name;
-  console.log(response.data.weather[0].icon);
 
   let iconElement = document.querySelector("#weather-icon");
 
@@ -51,7 +50,6 @@ function showTemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  console.log(response.data.weather[0].icon);
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -68,12 +66,24 @@ function showTemp(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
 }
+//make search work
 
-let apiKey = "2f4a61b0876133218968273ba29696cf";
-let units = "metric";
-let city = "Dublin";
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
+function search(city) {
+  let apiKey = "2f4a61b0876133218968273ba29696cf";
+  let units = "metric";
 
-axios.get(url).then(showTemp);
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
 
-let form = document.querySelector("");
+  axios.get(url).then(showTemp);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchElement = document.querySelector("#search-bar");
+  search(searchElement.value);
+}
+
+//make JS control the document instead of HTML controlling it
+//link to the FORM using the form id="#"; 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);

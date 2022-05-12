@@ -31,34 +31,36 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <div class="row">
-            <div class="col-4">
-              <p class="current-date" id="currentDate">Date | Time</p>
-              <h1 class="city-result" id="city-result">London</h1>
+          <form id="search-form">
+            <div class="row">
+              <div class="col-4">
+                <p class="current-date" id="currentDate">Date | Time</p>
+                <h1 class="city-result" id="city-result">London</h1>
+              </div>
+
+              <div class="col-8">
+                <input
+                  type="text"
+                  placeholder="Search"
+                  autocomplete="off"
+                  autofocus="on"
+                  class="search-bar"
+                  id="search-bar"
+                />
+
+                <input
+                  type="submit"
+                  value="Search"
+                  class="search-button"
+                  id="search-button"
+                />
+
+                <button type="button" class="btn btn-primary">
+                  Use Current Location
+                </button>
+              </div>
             </div>
-
-            <div class="col-8">
-              <input
-                type="text"
-                placeholder="Search"
-                autocomplete="off"
-                autofocus="on"
-                class="search-bar"
-                id="search-bar"
-              />
-
-              <input
-                type="submit"
-                value="Search"
-                class="search-button"
-                id="search-button"
-              />
-
-              <button type="button" class="btn btn-primary">
-                Use Current Location
-              </button>
-            </div>
-          </div>
+          </form>
         </div>
 
         <div class="col-6">
