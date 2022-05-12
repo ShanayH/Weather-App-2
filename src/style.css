@@ -15,6 +15,10 @@ button {
   padding: 10px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .card {
   background-color: #79c2d0;
 }
@@ -40,9 +44,9 @@ button {
   vertical-align: middle;
 }
 
-/* .temperature {
-  padding: 10px 20px;
-} */
+.temperature {
+  font-size: 40px;
+}
 
 .card {
   border-radius: 20px;
@@ -66,10 +70,7 @@ button {
 
 .forecast {
   padding: 20px;
-}
-
-.forecast span {
-  padding: 0px;
+  font-size: 20px;
 }
 
 .humidity {
