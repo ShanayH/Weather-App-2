@@ -75,3 +75,5 @@ let city = "Dublin";
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}&units=${units}`;
 
 axios.get(url).then(showTemp);
+
+let form = document.querySelector("");
