@@ -38,6 +38,8 @@ a {
 .city-result {
   margin-bottom: 0px;
   padding: 0 20px;
+  width: fit-content;
+  block-size: fit-content;
 }
 
 .icon {
@@ -59,12 +61,11 @@ a {
   position: relative;
   font-size: 14px;
   top: -10px;
-  
 }
 
 .units .active {
-  color: black;}
-  
+  color: black;
+}
 
 .description {
   font-style: italic;
