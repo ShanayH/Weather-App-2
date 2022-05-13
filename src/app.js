@@ -65,6 +65,8 @@ function showTemp(response) {
 
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = response.data.main.humidity;
+
+  celsiusTemperature = response.data.main.temp;
 }
 //make search work
 
@@ -83,7 +85,39 @@ function handleSubmit(event) {
   search(searchElement.value);
 }
 
+//correct
+function displayFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  //remove the active class from the celsius link
+  celsiusLink.classList.remove("active");
+  //add the active class to the fahrenheit link
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusTemperature = null;
+
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
 //make JS control the document instead of HTML controlling it
-//link to the FORM using the form id="#"; 
+//link to the FORM using the form id="#";
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheit);
+
+search("New York");
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsius);
