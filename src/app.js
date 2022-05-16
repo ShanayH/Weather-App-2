@@ -37,7 +37,8 @@ currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}
 
 //show the forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -65,7 +66,6 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
 
 //change temp to temp of city being searched for
 
@@ -101,7 +101,19 @@ function showTemp(response) {
   humidityElement.innerHTML = response.data.main.humidity;
 
   celsiusTemperature = response.data.main.temp;
+
+  getForecast(response.data.coord);
 }
+//find coordinates of the city we are searching
+
+function getForecast(coordinates) {
+  let apiKey = "2f4a61b0876133218968273ba29696cf";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 //make search work
 
 function search(city) {
