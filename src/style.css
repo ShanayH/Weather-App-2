@@ -98,3 +98,12 @@ a {
 .wind span {
   padding-left: 0px;
 }
+
+.weather-forecast-date {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.forecast-min {
+  color: grey;
+}
