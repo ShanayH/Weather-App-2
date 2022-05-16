@@ -35,14 +35,14 @@ let theMonth = months[now.getMonth()];
 let currentDateTime = document.querySelector("#currentDate");
 currentDateTime.innerHTML = `${theDay} ${theMonth} ${date} | ${hours}:${minutes}`;
 
-//show the forecast
+//show the forecast for the week
 
 function displayForecast(response) {
   console.log(response.data.daily);
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Mon", "Tues", "Weds", "Thurs"];
+  let days = ["Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -131,7 +131,7 @@ function handleSubmit(event) {
   search(searchElement.value);
 }
 
-//correct
+//change to fahrenheit
 function displayFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
