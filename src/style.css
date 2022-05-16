@@ -104,6 +104,10 @@ a {
   font-weight: 600;
 }
 
+.weather-forecast {
+  text-align: center;
+}
+
 .forecast-min {
   color: grey;
 }
