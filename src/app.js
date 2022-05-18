@@ -160,10 +160,17 @@ function displayFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
-let celsiusTemperature = null;
+//everytime i search, i want the celsius link to be active.
+
+function resetUnits() {
+  document.querySelector("#celsius").classList.add("active");
+  document.querySelector("#fahrenheit").classList.remove("active");
+}
+
+document.querySelector("#search-form").addEventListener("submit", resetUnits);
 
 search("New York");
-
+let celsiusTemperature = null;
 function showCelsius(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");

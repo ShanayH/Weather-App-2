@@ -61,10 +61,15 @@ a {
   position: relative;
   font-size: 14px;
   top: -10px;
+  color: black;
 }
 
-.units .active {
+.active {
   color: black;
+}
+
+.inactive {
+  color: yellow;
 }
 
 .description {
@@ -110,4 +115,6 @@ a {
 
 .forecast-min {
   color: grey;
+  display: block;
+  margin: 0 auto;
 }
